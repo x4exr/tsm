@@ -1,2 +1,8 @@
-add quad_word gp0 0xFFFFFFFFFFFFFF00
-add quad_word gp0 0xFF
+owner_routine:
+    add    quad_word    gp0 0xFFFFFFFFFFFFFF00
+    add    quad_word    gp0 0xFF
+    add    byte         gp1 *gp0
+exit_routine:
+    exit   quad_word    gp1 f
+    exit   quad_word    gp1 f
+    halt   quad_word    gp1 s
