@@ -1,0 +1,1 @@
+node ../target/main.js assemble add.xtsm

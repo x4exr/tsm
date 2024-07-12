@@ -1,0 +1,29 @@
+{
+  "name": "x4exr_tsm",
+  "version": "0.0.1",
+  "description": "Assembler in Typescript",
+  "main": "target/lib.js",
+  "scripts": {
+    "build:lib": "esbuild src/lib.ts --bundle --outdir=target --platform=node",
+    "build:main": "esbuild src/main.ts --bundle --outdir=target --banner:js=\"#!/usr/bin/env node\" --platform=node",
+    "build": "npm run build:lib && npm run build:main",
+    "build::watch:lib": "npm run build:lib -- --watch",
+    "build::watch:main": "npm run build:main -- --watch",
+    "example:add": "examples/add.xtsm.bat"
+  },
+  "bin": {
+    "xtsm": "./target/main.js"
+  },
+  "keywords": [
+    "assembler",
+    "arrseq",
+    "lightning"
+  ],
+  "author": "x4exr",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^20.14.10",
+    "commander": "^12.1.0",
+    "esbuild": "^0.23.0"
+  }
+}

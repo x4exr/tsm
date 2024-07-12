@@ -1,0 +1,2 @@
+add quad_word gp0 0xFFFFFFFFFFFFFF00
+add quad_word gp0 0xFF
